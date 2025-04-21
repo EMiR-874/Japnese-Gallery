@@ -1,0 +1,285 @@
+/* =========================================================================================IMPORTS */
+
+@import url("https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&display=swap");
+
+/* =========================================================================================ROOT */
+
+:root {
+  --fTitleMain: "Smooch Sans", serif;
+  --fTitleSub: "Alumni Sans Pinstripe", serif;
+  --colorMain: #d62044;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-image: url(../images/Main-images/Background-photo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+
+/* F ALL V OF STS */
+
+nav {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 120px;
+}
+
+nav .logo_positioner {
+  background-color: var(--colorMain);
+  height: 100%;
+  width: 120px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav .main_logo {
+  font-size: 4rem;
+}
+
+nav .menu_controls {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  height: 100%;
+  right: 5%;
+  gap: 20px;
+}
+
+nav .menu_controls a {
+  font-family: var(--fTitleMain);
+  font-weight: 500;
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: black;
+}
+
+nav .menu_icon {
+  position: relative;
+  width: 50px;
+  height: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+nav .menu_icon_one,
+nav .menu_icon_two {
+  width: 50px;
+  height: 2px;
+  background-color: black;
+  position: absolute;
+  transition: all 0.3s ease;
+}
+
+nav .menu_icon_one {
+  top: 0;
+}
+
+nav .menu_icon_two {
+  top: 80%;
+}
+
+nav .menu_icon:hover .menu_icon_one {
+  top: 20%;
+}
+
+nav .menu_icon:hover .menu_icon_two {
+  top: 60%;
+}
+
+/* =========================================================================================CONTACT INFO */
+.menu_contact_info {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  width: 70%;
+  margin: 0 auto;
+  padding-top: 5%;
+}
+
+.menu_contact_info a {
+  text-decoration: none;
+  color: black;
+  font-family: var(--fTitleMain);
+  font-weight: 500;
+  font-size: 7rem;
+  font-style: italic;
+  position: relative;
+  width: fit-content;
+}
+
+.menu_contact_info a:nth-child(3):before {
+  content: "";
+  position: absolute;
+  border-bottom: 5px solid black;
+  border-radius: 50px;
+  bottom: 10px;
+  left: 0%;
+  width: 100%;
+  transition: all 0.3s ease-out;
+}
+.menu_contact_info a:nth-child(1):before,
+.menu_contact_info a:nth-child(2):before {
+  content: "";
+  position: absolute;
+  border-bottom: 5px solid black;
+  border-radius: 50px;
+  bottom: 10px;
+  left: 0;
+  width: 0;
+  transition: all 0.3s ease-out;
+}
+
+.menu_contact_info a:nth-child(1):hover:before,
+.menu_contact_info a:nth-child(2):hover:before {
+  width: 100%;
+}
+
+nav .menu_icon.clicked {
+  transition: all 1s ease-in-out;
+}
+
+nav .menu_icon.clicked .menu_icon_one {
+  transform: rotate(45deg);
+  top: 50%;
+  width: 40px;
+}
+nav .menu_icon.clicked .menu_icon_two {
+  transform: rotate(-45deg);
+  top: 50%;
+  width: 40px;
+}
+nav .menu_icon.clicked:hover .menu_icon_one,
+nav .menu_icon.clicked:hover .menu_icon_two {
+  transform: rotate(35deg);
+}
+
+.hidden-contact {
+  display: none;
+}
+
+.body_content_hidden {
+  display: none;
+}
+
+.logo_positioner {
+  cursor: pointer;
+  user-select: none;
+}
+
+/* ========================================================================================= MAIN BODY */
+.body_main_content {
+  width: 75%;
+  margin: 0 auto;
+}
+.body_main_content h1 {
+  font-family: var(--fTitleMain);
+  font-size: 5rem;
+}
+
+.body_wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.text_wrapper {
+  width: 40%;
+}
+
+.text_wrapper p:first-child {
+  line-height: 120%;
+}
+.text_wrapper p,
+.text_wrapper a {
+  font-family: var(--fTitleSub);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 2rem;
+  color: black;
+  line-height: 0;
+  position: relative;
+}
+.text_wrapper a::before {
+  content: "";
+  position: absolute;
+  border-bottom: 3px solid black;
+  border-radius: 50px;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  transition: all 0.3s ease-out;
+}
+.text_wrapper a:hover:before {
+  width: 100%;
+}
+.text_wrapper h3 {
+  font-family: var(--fTitleMain);
+  font-size: 2rem;
+  line-height: 50%;
+}
+
+.form_wrapper {
+  width: 50%;
+}
+
+.contact-left {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.contact-inputs {
+  background-color: transparent;
+  width: 100%;
+  height: 70px;
+  border: none;
+  outline: none;
+  padding-left: 25px;
+  color: black;
+  border-bottom: 2px solid black;
+  transition: all 0.3s ease;
+  font-size: 1.3rem;
+  font-family: var(--fTitleMain);
+  font-weight: 600;
+}
+.contact-left textarea {
+  height: 120px;
+  resize: none;
+  padding-top: 15px;
+  border-bottom: 2px solid black;
+  transition: all 0.3s ease;
+}
+.contact-inputs:focus {
+  border-bottom: 2px solid var(--colorMain);
+}
+.contact-inputs:focus::placeholder {
+  color: var(--colorMain);
+  transition: all 0.3s ease;
+}
+.contact-inputs::placeholder {
+  color: black;
+  font-size: 1.3rem;
+  font-family: var(--fTitleMain);
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.contact-left button {
+  height: 50px;
+  width: fit-content;
+  margin-left: 22px;
+  font-size: 1.4rem;
+  font-family: var(--fTitleMain);
+  font-weight: 600;
+  letter-spacing: 1px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+  text-decoration: underline;
+}

@@ -1,0 +1,66 @@
+@media (max-width: 1024px) {
+  .body_main_content h1 {
+    padding-top: 15%;
+  }
+  .body_main_content {
+    width: 90%;
+  }
+  .body_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 50px;
+  }
+  .form_wrapper,
+  .text_wrapper {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .form_wrapper {
+    padding-top: 10%;
+  }
+  .text_wrapper {
+    padding-bottom: 10%;
+  }
+}
+
+@media (max-width: 650px) {
+  .form_wrapper,
+  .text_wrapper {
+    width: 100%;
+  }
+
+  .text_wrapper p,
+  .text_wrapper a {
+    font-size: 1.5rem;
+  }
+
+  .menu_contact_info {
+    padding-top: 20%;
+  }
+  .menu_contact_info a {
+    font-size: 6rem;
+  }
+  nav .logo_positioner {
+    height: 80%;
+    width: 100px;
+  }
+}
+
+@media (max-width: 425px) {
+  .body_main_content h1 {
+    font-size: 4rem;
+  }
+  .contact-inputs {
+    width: 95%;
+  }
+}
+
+@media (max-width: 320px) {
+  .body_main_content h1 {
+    font-size: 3.5rem;
+  }
+  .contact-inputs {
+    width: 90%;
+  }
+}

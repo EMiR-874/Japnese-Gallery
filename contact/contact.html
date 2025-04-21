@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - JG</title>
+    <link rel="stylesheet" href="contact.css" />
+    <link rel="stylesheet" href="contact-responsive.css" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png" />
+    <link rel="manifest" href="../favicon/site.webmanifest" />
+  </head>
+  <body>
+    <!--____________________________________________________________________________________________________________NAV -->
+    <nav>
+      <div class="logo_positioner">
+        <h1 class="main_logo">ク</h1>
+      </div>
+      <div class="menu_controls">
+        <h2 id="toggle_menu_text" class="menu_text"><a href="#">Menu</a></h2>
+        <div class="menu_icon" id="toggle_menu_icon">
+          <div class="menu_icon_one"></div>
+          <div class="menu_icon_two"></div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="menu_contact_info hidden-contact">
+      <a href="../index.html">Home</a>
+      <a href="../about/about-me.html">About</a>
+      <a href="../contact/contact.html">Contact</a>
+      <br /><br /><br /><br /><br /><br /><br />
+    </div>
+
+    <!--____________________________________________________________________________________________________________BODY -->
+
+    <div class="body_main_content">
+      <h1>If you have any questions, feel free to contact me anytime !!!</h1>
+
+      <div class="body_wrapper">
+        <!-- prettier-ignore -->
+        <div class="form_wrapper">
+            <form action="send.php" method="POST" class="contact-left">
+                <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required />
+                <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required />
+                <textarea name="message" placeholder="Your Message" class="contact-inputs" required></textarea>
+                <button type="submit">Send</button>
+              </form>
+        </div>
+        <div class="text_wrapper">
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus, reiciendis? Lorem
+            ipsum dolor sit.
+          </p>
+          <h3>My Email</h3>
+          <a href="#">mail@example.com</a>
+          <h3>My Phone</h3>
+          <a href="#">+33 1 09 75 83 51</a>
+        </div>
+      </div>
+    </div>
+
+    <script src="c-script.js"></script>
+  </body>
+</html>

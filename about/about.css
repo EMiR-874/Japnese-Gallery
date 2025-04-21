@@ -1,0 +1,269 @@
+/* =========================================================================================IMPORTS */
+
+@import url("https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&display=swap");
+
+/* =========================================================================================ROOT */
+
+:root {
+  --fTitleMain: "Smooch Sans", serif;
+  --fTitleSub: "Alumni Sans Pinstripe", serif;
+  --colorMain: #d62044;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-image: url(../images/Main-images/Background-photo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+
+/* F ALL V OF STS */
+
+nav {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 120px;
+}
+
+nav .logo_positioner {
+  background-color: var(--colorMain);
+  height: 100%;
+  width: 120px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav .main_logo {
+  font-size: 4rem;
+}
+
+nav .menu_controls {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  height: 100%;
+  right: 5%;
+  gap: 20px;
+}
+
+nav .menu_controls a {
+  font-family: var(--fTitleMain);
+  font-weight: 500;
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: black;
+}
+
+nav .menu_icon {
+  position: relative;
+  width: 50px;
+  height: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+nav .menu_icon_one,
+nav .menu_icon_two {
+  width: 50px;
+  height: 2px;
+  background-color: black;
+  position: absolute;
+  transition: all 0.3s ease;
+}
+
+nav .menu_icon_one {
+  top: 0;
+}
+
+nav .menu_icon_two {
+  top: 80%;
+}
+
+nav .menu_icon:hover .menu_icon_one {
+  top: 20%;
+}
+
+nav .menu_icon:hover .menu_icon_two {
+  top: 60%;
+}
+
+/* =========================================================================================CONTACT INFO */
+.menu_contact_info {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  width: 70%;
+  margin: 0 auto;
+  padding-top: 5%;
+}
+
+.menu_contact_info a {
+  text-decoration: none;
+  color: black;
+  font-family: var(--fTitleMain);
+  font-weight: 500;
+  font-size: 7rem;
+  font-style: italic;
+  position: relative;
+  width: fit-content;
+}
+
+.menu_contact_info a:nth-child(2):before {
+  content: "";
+  position: absolute;
+  border-bottom: 5px solid black;
+  border-radius: 50px;
+  bottom: 10px;
+  left: 0%;
+  width: 100%;
+  transition: all 0.3s ease-out;
+}
+.menu_contact_info a:nth-child(1):before,
+.menu_contact_info a:nth-child(3):before {
+  content: "";
+  position: absolute;
+  border-bottom: 5px solid black;
+  border-radius: 50px;
+  bottom: 10px;
+  left: 0;
+  width: 0;
+  transition: all 0.3s ease-out;
+}
+
+.menu_contact_info a:nth-child(1):hover:before,
+.menu_contact_info a:nth-child(3):hover:before {
+  width: 100%;
+}
+
+nav .menu_icon.clicked {
+  transition: all 1s ease-in-out;
+}
+
+nav .menu_icon.clicked .menu_icon_one {
+  transform: rotate(45deg);
+  top: 50%;
+  width: 40px;
+}
+nav .menu_icon.clicked .menu_icon_two {
+  transform: rotate(-45deg);
+  top: 50%;
+  width: 40px;
+}
+nav .menu_icon.clicked:hover .menu_icon_one,
+nav .menu_icon.clicked:hover .menu_icon_two {
+  transform: rotate(35deg);
+}
+
+.hidden-contact {
+  display: none;
+}
+
+.body_content_hidden {
+  display: none;
+}
+
+.logo_positioner {
+  cursor: pointer;
+  user-select: none;
+}
+/* ========================================================================================= MAIN BODY */
+
+.body_main_content {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.body_main_content h1 {
+  font-family: var(--fTitleMain);
+  font-size: 5rem;
+  width: 60%;
+  position: relative;
+  z-index: 5;
+}
+
+.body_main_content h1 span:first-of-type {
+  color: red;
+}
+.body_main_content h1 span:nth-child(2) {
+  color: white;
+}
+.body_main_content h1 span:last-of-type {
+  color: blue;
+}
+
+.body_info_des {
+  width: 30%;
+  line-height: 150%;
+  position: relative;
+}
+
+.body_info_des p {
+  font-family: var(--fTitleSub);
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.info_wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.first_p {
+  margin-bottom: 10%;
+}
+
+.body_info_des h2 {
+  font-family: var(--fTitleMain);
+  font-size: 3rem;
+}
+
+.skills_p {
+  line-height: 50%;
+}
+
+.socials a {
+  font-family: var(--fTitleSub);
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-decoration: none;
+  margin-right: 2%;
+  position: relative;
+  width: fit-content;
+}
+
+.socials a::before {
+  content: "";
+  position: absolute;
+  border-bottom: 2px solid black;
+  border-radius: 50px;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  transition: all 0.3s ease-out;
+}
+
+.socials a:hover:before {
+  width: 100%;
+}
+
+.body_info {
+  display: flex;
+  justify-content: space-between;
+}
+
+img {
+  position: absolute;
+  top: 100%;
+  left: 90%;
+  height: 70cap;
+  transform: translate(-100%, -100%);
+}

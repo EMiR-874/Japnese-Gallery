@@ -1,0 +1,303 @@
+/* =========================================================================================IMPORTS */
+
+@import url("https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&display=swap");
+
+/* =========================================================================================ROOT */
+
+:root {
+  --fTitleMain: "Smooch Sans", serif;
+  --fTitleSub: "Alumni Sans Pinstripe", serif;
+  --colorMain: #d62044;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-image: url(images/Main-images/Background-photo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+
+/* =========================================================================================NAV */
+
+nav {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 120px;
+}
+
+nav .logo_positioner {
+  background-color: var(--colorMain);
+  height: 100%;
+  width: 120px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav .main_logo {
+  font-size: 4rem;
+}
+
+nav .menu_controls {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  height: 100%;
+  right: 5%;
+  gap: 20px;
+}
+
+nav .menu_controls a {
+  font-family: var(--fTitleMain);
+  font-weight: 500;
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: black;
+}
+
+nav .menu_icon {
+  position: relative;
+  width: 50px;
+  height: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+nav .menu_icon_one,
+nav .menu_icon_two {
+  width: 50px;
+  height: 2px;
+  background-color: black;
+  position: absolute;
+  transition: all 0.3s ease;
+}
+
+nav .menu_icon_one {
+  top: 0;
+}
+
+nav .menu_icon_two {
+  top: 80%;
+}
+
+nav .menu_icon:hover .menu_icon_one {
+  top: 20%;
+}
+
+nav .menu_icon:hover .menu_icon_two {
+  top: 60%;
+}
+
+/* =========================================================================================CONTACT INFO */
+.menu_contact_info {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  width: 70%;
+  margin: 0 auto;
+  padding-top: 5%;
+}
+
+.menu_contact_info a {
+  text-decoration: none;
+  color: black;
+  font-family: var(--fTitleMain);
+  font-weight: 500;
+  font-size: 7rem;
+  font-style: italic;
+  position: relative;
+  width: fit-content;
+}
+
+.menu_contact_info a:nth-child(1):before {
+  content: "";
+  position: absolute;
+  border-bottom: 5px solid black;
+  border-radius: 50px;
+  bottom: 10px;
+  left: 0%;
+  width: 100%;
+  transition: all 0.3s ease-out;
+}
+.menu_contact_info a:nth-child(2):before,
+.menu_contact_info a:nth-child(3):before {
+  content: "";
+  position: absolute;
+  border-bottom: 5px solid black;
+  border-radius: 50px;
+  bottom: 10px;
+  left: 0;
+  width: 0;
+  transition: all 0.3s ease-out;
+}
+
+.menu_contact_info a:nth-child(2):hover:before,
+.menu_contact_info a:nth-child(3):hover:before {
+  width: 100%;
+}
+
+nav .menu_icon.clicked {
+  transition: all 1s ease-in-out;
+}
+
+nav .menu_icon.clicked .menu_icon_one {
+  transform: rotate(45deg);
+  top: 50%;
+  width: 40px;
+}
+nav .menu_icon.clicked .menu_icon_two {
+  transform: rotate(-45deg);
+  top: 50%;
+  width: 40px;
+}
+nav .menu_icon.clicked:hover .menu_icon_one,
+nav .menu_icon.clicked:hover .menu_icon_two {
+  transform: rotate(35deg);
+}
+
+.hidden-contact {
+  display: none;
+}
+
+.logo_positioner {
+  cursor: pointer;
+  user-select: none;
+}
+
+/* =========================================================================================MAIN BODY */
+.body_main_content {
+  display: flex;
+  padding-top: 5%;
+  justify-content: space-between;
+  width: 65%;
+  margin: 0 auto;
+}
+.body_content_hidden {
+  display: none;
+}
+
+/* =========================================================================================text div */
+.main_content_text_left-side {
+  width: 400px;
+  margin-left: 10%;
+  position: sticky;
+  top: 50%;
+  transform: translateY(-50%);
+  height: fit-content;
+  line-height: 10%;
+}
+
+.m_c_text_wrapper p:first-of-type {
+  font-family: var(--fTitleSub);
+  font-size: 1.5rem;
+  font-weight: 600;
+  width: 100%;
+}
+.m_c_text_wrapper h1 {
+  font-family: var(--fTitleMain);
+  font-size: 6rem;
+  font-weight: 500;
+  width: 100%;
+  line-height: 100%;
+}
+.m_c_text_wrapper a {
+  font-family: var(--fTitleSub);
+  font-size: 1.8rem;
+  font-weight: 600;
+  width: fit-content;
+  position: relative;
+  cursor: pointer;
+  line-height: 100%;
+  text-decoration: none;
+  color: black;
+}
+.m_c_text_wrapper a:before {
+  content: "";
+  position: absolute;
+  border-bottom: 1.5px solid black;
+  bottom: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  transition: all 0.3s ease-out;
+}
+
+.m_c_text_wrapper a:hover:before {
+  border-bottom: 1px solid black;
+  left: 0;
+  width: 0%;
+}
+
+/* =========================================================================================text div */
+
+/* =======================================main image div */
+.m_c_image_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 200px;
+}
+
+/* =========================================================================================image div */
+.m_c_i_w_n_i {
+  width: 700px;
+  height: 470px;
+  background-color: red;
+  position: relative;
+}
+
+.m_c_i_w_next-activator {
+  width: 100%;
+  height: 50px;
+  background-color: transparent;
+  position: absolute;
+  top: 100%;
+  transform: translateY(-100%);
+}
+
+.image_one .m_c_i_w_n_image {
+  background: url(images/Asset-images/Japan-1.jpg) center / cover no-repeat;
+  height: 100%;
+}
+.image_two .m_c_i_w_n_image {
+  background: url(images/Asset-images/Japan-2.jpg) center / cover no-repeat;
+  height: 100%;
+}
+.image_three .m_c_i_w_n_image {
+  background: url(images/Asset-images/Japan-4.jpg) center / cover no-repeat;
+  height: 100%;
+}
+.image_four .m_c_i_w_n_image {
+  background: url(images/Asset-images/Japan-6.jpg) center / cover no-repeat;
+  height: 100%;
+}
+.image_five .m_c_i_w_n_image {
+  background: url(images/Asset-images/Japan-3.jpg) center / cover no-repeat;
+  height: 100%;
+}
+.image_six .m_c_i_w_n_image {
+  background: url(images/Asset-images/Japan-5.jpg) center / cover no-repeat;
+  height: 100%;
+}
+
+.m_c_text_wrapper {
+  display: none;
+}
+
+.tjf1,
+.tja1,
+.tjn1,
+.tjf2,
+.tja2,
+.tjn2 {
+  display: none;
+}
+
+.small_screen_text {
+  display: none;
+}
